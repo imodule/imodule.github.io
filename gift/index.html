@@ -18,7 +18,7 @@
     //periodical message sender
     setInterval(function () {
       var message = { sale: Math.floor((Math.random() * 100) + 1) + '%' };
-      console.log('Parent: sale ' + message);
+      console.log('Parent sent ', message);
       iframe.postMessage(message, domain); //send the message and target URI
     }, 3000);
   </script>
