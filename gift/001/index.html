@@ -49,8 +49,8 @@
 			var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 			eventer(messageEvent, function (e) {
 				console.log('parent received message!:  ', e.data);
-				if (EventBus) {
-					EventBus.$emit('data', e.data);
+				if (window.EventBus) {
+					window.EventBus.$emit('data', e.data);
 				}
 				else {
 					record = e.data;
@@ -74,7 +74,7 @@
 			}
 
 			function init() {
-				var EventBus = new Vue();
+				window.EventBus = new Vue();
 				var app = new Vue({
 					el: '#app',
 					data: {
@@ -93,7 +93,7 @@
 					methods: {
 						getData: function () {
 							var vm = this;
-							EventBus.$on('data', function (data) {
+							window.EventBus.$on('data', function (data) {
 								console.log(data)
 								vm.record = data;
 							});
