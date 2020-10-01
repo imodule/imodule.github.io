@@ -59,19 +59,10 @@
 			}, false);
 
 			// init
-			if (window.parent) {
-				if (window.parent.Vue) {
-					window.Vue = window.parent.Vue;
-					console.log('Init 1')
-					init()
-				}
-				else {
-					window.loadScripts(["/assets/core/vue.min.js"], function () {
-						console.log('Init 2')
-						init()
-					});
-				}
-			}
+			window.loadScripts(["/assets/core/vue.min.js"], function () {
+				console.log('Init')
+				init()
+			});
 
 			function init() {
 				window.EventBus = new Vue();
