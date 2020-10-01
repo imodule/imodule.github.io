@@ -13,7 +13,7 @@
 			<div class="banner-infoSale widgetBgInfo">
 				<div class="banner-infoText">
 					<p class="text-info widgetMore">
-						GIẢM NGAY 70%
+						GIẢM NGAY {{record.sale}}
 					</p>
 				</div>
 			</div>
@@ -48,7 +48,7 @@
 			var eventer = window[eventMethod];
 			var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 			eventer(messageEvent, function (e) {
-				console.log('parent received message!:  ', e.data);
+				console.log('-- Child :  ', e.data);
 				if (window.EventBus) {
 					window.EventBus.$emit('data', e.data);
 				}
@@ -85,7 +85,6 @@
 						getData: function () {
 							var vm = this;
 							window.EventBus.$on('data', function (data) {
-								console.log(data)
 								vm.record = data;
 							});
 						}
