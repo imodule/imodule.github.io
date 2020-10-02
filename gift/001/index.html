@@ -36,62 +36,63 @@
 			</div>
 			<!-- <a target="blank" href="https://imodule.github.io" class="widgetPowerBy">imodule.github.io</a> -->
 		</div>
-		<script>
-			var $jscomp = $jscomp || {}; $jscomp.scope = {}; $jscomp.arrayIteratorImpl = function (a) { var b = 0; return function () { return b < a.length ? { done: !1, value: a[b++] } : { done: !0 } } }; $jscomp.arrayIterator = function (a) { return { next: $jscomp.arrayIteratorImpl(a) } }; $jscomp.makeIterator = function (a) { var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator]; return b ? b.call(a) : $jscomp.arrayIterator(a) };
-			function loadScript(a, b) { var c = document.createElement("script"); c.type = "text/javascript"; c.src = a; c.onreadystatechange = b; c.onload = b; document.head.appendChild(c) } function loadScripts(a, b) { for (var c = arguments, g = this, e = 0, h = function () { e++; e >= a.length && b.call(g, c) }, f = $jscomp.makeIterator(a), d = f.next(); !d.done; d = f.next())loadScript(d.value, h) };
-		</script>
-		<script>
-			// data
-			var record = {};
-			// event
-			var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-			var eventer = window[eventMethod];
-			var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-			eventer(messageEvent, function (e) {
-				console.log('-- Child :  ', e.data);
-				if (window.EventBus) {
-					window.EventBus.$emit('data', e.data);
-				}
-				else {
-					record = e.data;
-				}
-
-			}, false);
-
-			// init
-			window.loadScripts(["/assets/core/vue.min.js"], function () {
-				console.log('Init')
-				init()
-			});
-
-			function init() {
-				window.EventBus = new Vue();
-				var app = new Vue({
-					el: '#app',
-					data: {
-						record: record,
-					},
-					computed: {
-						// a computed getter
-						reversedMessage: function () {
-							// `this` points to the vm instance
-							return this.message.split('').reverse().join('')
-						}
-					},
-					mounted: function () {
-						this.getData();
-					},
-					methods: {
-						getData: function () {
-							var vm = this;
-							window.EventBus.$on('data', function (data) {
-								vm.record = data;
-							});
-						}
-					}
-				});
+	</div>
+	<script>
+		var $jscomp = $jscomp || {}; $jscomp.scope = {}; $jscomp.arrayIteratorImpl = function (a) { var b = 0; return function () { return b < a.length ? { done: !1, value: a[b++] } : { done: !0 } } }; $jscomp.arrayIterator = function (a) { return { next: $jscomp.arrayIteratorImpl(a) } }; $jscomp.makeIterator = function (a) { var b = "undefined" != typeof Symbol && Symbol.iterator && a[Symbol.iterator]; return b ? b.call(a) : $jscomp.arrayIterator(a) };
+		function loadScript(a, b) { var c = document.createElement("script"); c.type = "text/javascript"; c.src = a; c.onreadystatechange = b; c.onload = b; document.head.appendChild(c) } function loadScripts(a, b) { for (var c = arguments, g = this, e = 0, h = function () { e++; e >= a.length && b.call(g, c) }, f = $jscomp.makeIterator(a), d = f.next(); !d.done; d = f.next())loadScript(d.value, h) };
+	</script>
+	<script>
+		// data
+		var record = {};
+		// event
+		var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+		var eventer = window[eventMethod];
+		var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+		eventer(messageEvent, function (e) {
+			console.log('-- Child :  ', e.data);
+			if (window.EventBus) {
+				window.EventBus.$emit('data', e.data);
 			}
-		</script>
+			else {
+				record = e.data;
+			}
+
+		}, false);
+
+		// init
+		window.loadScripts(["/assets/js/vue.min.js"], function () {
+			console.log('Init')
+			init()
+		});
+
+		function init() {
+			window.EventBus = new Vue();
+			var app = new Vue({
+				el: '#app',
+				data: {
+					record: record,
+				},
+				computed: {
+					// a computed getter
+					reversedMessage: function () {
+						// `this` points to the vm instance
+						return this.message.split('').reverse().join('')
+					}
+				},
+				mounted: function () {
+					this.getData();
+				},
+				methods: {
+					getData: function () {
+						var vm = this;
+						window.EventBus.$on('data', function (data) {
+							vm.record = data;
+						});
+					}
+				}
+			});
+		}
+	</script>
 </body>
 
 </html>

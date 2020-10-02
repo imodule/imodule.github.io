@@ -9,8 +9,7 @@
 
 <body>
   <div>
-    <iframe id="myIFrame" src="https://imodule.github.io/gift/001" width="600" height="600" frameBorder="0"
-      scrolling="no"></iframe>
+    <iframe id="myIFrame" src="./001" width="600" height="800" frameBorder="0" scrolling="no"></iframe>
   </div>
   <script>
     var domain = 'https://imodule.github.io';
@@ -18,10 +17,10 @@
 
     //periodical message sender
     setInterval(function () {
-      var message = { locale: Math.floor((Math.random() * 100) + 1) + '%' };
+      var message = { locale: 'en' };
       console.log('Parent sent ', message);
       iframe.postMessage(message, domain); //send the message and target URI
-    }, 3000);
+    }, 6000);
   </script>
 </body>
 
