@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Gift</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <script src="/assets/js/vue.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <iframe id="myIFrame" src="http://localhost:8080/wrap.html?widget=player" width="1200" height="800" frameBorder="0"
+      scrolling="no"></iframe>
+  </div>
+  <script>
+    // var domain = 'https://imodule.github.io';
+    var iframe = document.getElementById('myIFrame').contentWindow;
+
+    //periodical message sender
+    setTimeout(function () {
+      var message = {
+        option: {
+          src: 'bTqVqk7FSmY',
+          provider: 'youtube',
+        }
+      };
+      console.log('Parent sent ', message);
+      iframe.postMessage(message, 'http://localhost:8080'); //send the message and target URI
+    }, 988);
+  </script>
+</body>
+
+</html>
