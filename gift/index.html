@@ -9,16 +9,15 @@
 
 <body>
   <div>
-    <iframe id="myIFrame" src="https://imodule.github.io/gift/001" width="600" height="600" frameBorder="0"
-      scrolling="no"></iframe>
+    <iframe id="myIFrame" src="/gift/001" width="600" height="600" frameBorder="0" scrolling="no"></iframe>
   </div>
   <script>
-    var domain = 'https://imodule.github.io';
+    var domain = 'http://127.0.0.1:5500/';
     var iframe = document.getElementById('myIFrame').contentWindow;
 
     //periodical message sender
     setInterval(function () {
-      var message = { sale: Math.floor((Math.random() * 100) + 1) + '%' };
+      var message = { type: 'datas', data: [{ sale: Math.floor((Math.random() * 100) + 1) + '%' }] };
       console.log('Parent sent ', message);
       iframe.postMessage(message, domain); //send the message and target URI
     }, 3000);
