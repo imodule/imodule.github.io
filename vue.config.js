@@ -8,7 +8,6 @@ const init = require("./init.js")
 glob.sync("./src/pages/**/app.js").forEach(path => {
   const chunk = path.split("./src/pages/")[1].split("/app.js")[0]
   // const com = "im-" + chunk.replace("/", "-")
-  console.log(path)
   pages[chunk] = {
     entry: path,
     template: path.replace("app.js", "/index.html"),
@@ -52,9 +51,4 @@ module.exports = {
       }
     }
   }
-  // pluginOptions: {
-  //   htmlReplace: {
-  //     patterns: patterns
-  //   }
-  // }
 }

@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=/icon/themify-icons.css><link rel=stylesheet href=/css/vue-bone.css><link rel=stylesheet href=/css/vue-tab-markdown.css><title></title><style>#main-wrap {
+      padding: 1rem
+    }
+
+    #main tab-markdown>div {
+      margin-top: 1rem;
+    }</style><link href=/css/player/index.css rel=preload as=style><link href=/js/player/index.js rel=preload as=script><link href=/css/player/index.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-player id=imPlayer></im-player><tab-markdown><textarea vue-slot=tab-code>
+            <im-player id=imPlayer>
+              <span vue-slot=style>
+                //edit css class (See tab "style")
+                .wrap-player{background: transparent}
+              </span>
+            </im-player>
+    
+            <script>
+              var imPlayer = document.querySelector('#imPlayer');
+              // config 
+              imPlayer.base = {
+                option: {}, //See tab "option"
+                data: {} //See tab "data"
+              }
+            </script>
+          </textarea> <textarea vue-slot=tab-option>
+            | Attribute |	Description |	Type | Accepted Values | Default |
+            | --------- | ----------- | ---- | --------------- | ------- |
+            | provider | Video hosting service Or Video Local | String | video/youtube/vimeo | youtube |
+            | src | EmbedId Or Link | String | ~ | ~ |
+          </textarea> <textarea vue-slot=tab-data>
+            | Attribute |	Description |	Type | Accepted Values | Default |
+            | --------- | ----------- | ---- | --------------- | ------- |
+          </textarea> <textarea vue-slot=tab-style>
+            .a{
+              color: #333;
+            }
+          </textarea></tab-markdown></template></im-bone></div><script src=/js/vue.min.js></script><script src=/js/element-ui.js></script><script src=/js/vue-bone.js></script><script src=/js/vue-tab-markdown.js></script><script>window.onload = function(){
+  var app = new Vue({
+    el: '#page',
+    data: {
+      debut: false,
+      slotLogo: "header-begin",
+      menuFloat: "right",
+      backgroundColor: '#323b44',
+      headerData: {
+        dark: true,
+        fixed: true,
+        menu: [
+          { label: "Dung Pham", icon: "ti-user", children: [{ label: "My Account" }] },
+        ]
+      },
+      navLeftData: {
+        toggle: true,
+        dark: true,
+        menu: [
+          { label: "Home", icon: "ti-user", link: "/", children: [{ label: "My Account" }] },
+          { title: "Player", label: "Player", icon: "ti-settings", link: "/player", children: [{ label: "Menu Extent", }] }
+        ]
+      }
+    },
+    methods: {
+      onClicked(opt) {
+        console.log(opt)
+        if (opt.link) {
+          location.href = opt.link;
+        }
+      }
+    },
+    mounted: function () {
+      var vm = this;
+      if (window.innerWidth <= 768) {
+        vm.slotLogo = 'header-center'
+      }
+      window.onresize = function () {
+        if (window.innerWidth <= 768) {
+          vm.slotLogo = 'header-center'
+        }
+        else {
+          vm.slotLogo = 'header-begin'
+        }
+      }
+    }
+  });
+}</script><script>window.addEventListener('load', (event) => {
+      console.log('waiting loaded script');
+      var imPlayer = document.querySelector('#imPlayer');
+      console.log(imPlayer)
+      // config 
+      imPlayer.base = {
+        option: {
+          src: "bTqVqk7FSmY",
+          provider: "youtube"
+        }, //See tab "option"
+        data: {} //See tab "data"
+      }
+    });</script><script src=/js/player/index.js></script></body></html>

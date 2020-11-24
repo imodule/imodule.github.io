@@ -18,8 +18,13 @@ window.onload = function(){
         toggle: true,
         dark: true,
         menu: [
-          { label: "Home", icon: "ti-user", link: "/", children: [{ label: "My Account" }] },
-          { title: "Player", label: "Player", icon: "ti-settings", link: "/player", children: [{ label: "Menu Extent", }] }
+          { label: "Home", icon: "ti-home", link: "/" },
+          { title: "Player", label: "Player", icon: "ti-control-play",
+            children: [
+              { label: "Player default", link: "/player" },
+              { label: "Player theme 1", link: "/player/theme" }
+            ]
+          }
         ]
       }
     },
