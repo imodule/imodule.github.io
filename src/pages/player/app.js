@@ -1,7 +1,6 @@
 import Vue from "vue"
-import App from "./app.vue"
+import imPlayer from "./app.vue"
 
-new Vue({
-  el: "#app",
-  render: h => h(App)
-})
+import vueCustomElement from "vue-custom-element"
+Vue.use(vueCustomElement)
+Vue.customElement("im-player", imPlayer)

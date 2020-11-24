@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=/icon/themify-icons.css><link rel=stylesheet href=/css/vue-bone.css><title>index-page</title><style>#main-wrap {
+      padding: 1rem
+    }</style><link href=/js/index.js rel=preload as=script></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template v-slot><im-index></im-index></template></im-bone></div><script src=/js/vue.min.js></script><script src=/js/element-ui.js></script><script src=/js/vue-bone.js></script><script>window.onload = function(){
+  var app = new Vue({
+    el: '#page',
+    data: {
+      debut: false,
+      slotLogo: "header-begin",
+      menuFloat: "right",
+      backgroundColor: '#323b44',
+      headerData: {
+        dark: true,
+        fixed: true,
+        menu: [
+          { label: "Dung Pham", icon: "ti-user", children: [{ label: "My Account" }] },
+        ]
+      },
+      navLeftData: {
+        toggle: true,
+        dark: true,
+        menu: [
+          { label: "Home", icon: "ti-user", link: "/", children: [{ label: "My Account" }] },
+          { title: "Player", label: "Player", icon: "ti-settings", link: "/player", children: [{ label: "Menu Extent", }] }
+        ]
+      }
+    },
+    methods: {
+      onClicked(opt) {
+        console.log(opt)
+        if (opt.link) {
+          location.href = opt.link;
+        }
+      }
+    },
+    mounted: function () {
+      var vm = this;
+      if (window.innerWidth <= 768) {
+        vm.slotLogo = 'header-center'
+      }
+      window.onresize = function () {
+        if (window.innerWidth <= 768) {
+          vm.slotLogo = 'header-center'
+        }
+        else {
+          vm.slotLogo = 'header-begin'
+        }
+      }
+    }
+  });
+}</script><script src=/js/index.js></script></body></html>

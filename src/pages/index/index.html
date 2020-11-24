@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <link rel="stylesheet" href="<%= BASE_URL %>icon/themify-icons.css">
+  <link rel="stylesheet" href="<%= BASE_URL %>css/vue-bone.css">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <style>
+    #main-wrap {
+      padding: 1rem
+    }
+  </style>
+</head>
+
+<body style="margin: 0;">
+  <noscript>
+    <strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="page">
+    <im-bone @clicked="onClicked" :header-data="headerData" :nav-left-data="navLeftData"
+      :background-color="backgroundColor" :menu-float="menuFloat">
+      <template :slot="slotLogo">
+        <div class="header-logo"><img src="<%= BASE_URL %>img/logo.png" /></div>
+      </template>
+      <template v-slot>
+        <im-index></im-index>
+      </template>
+    </im-bone>
+  </div>
+
+  <script src="<%= BASE_URL %>js/vue.min.js"></script>
+  <script src="<%= BASE_URL %>js/element-ui.js"></script>
+  <script src="<%= BASE_URL %>js/vue-bone.js"></script>
+  <%= INIT %>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>

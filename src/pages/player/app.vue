@@ -1,24 +1,24 @@
 <template>
   <div class="wrap-player" v-if="reInit">
     <vue-plyr>
-      <template v-if="base.option.provider">
+      <template
+        v-if="
+          option.provider &&
+            (option.provider == 'youtube' || option.provider == 'vimeo')
+        "
+      >
         <div
-          :data-plyr-provider="base.option.provider"
-          :data-plyr-embed-id="base.option.src"
+          :data-plyr-provider="option.provider"
+          :data-plyr-embed-id="option.src"
         ></div>
       </template>
       <template v-else>
-        <video
-          controls
-          crossorigin
-          playsinline
-          :data-poster="base.option.poster"
-        >
-          <source size="720" :src="base.option.src" type="video/mp4" />
+        <video controls crossorigin playsinline :data-poster="option.poster">
+          <source size="720" :src="option.src" type="video/mp4" />
         </video>
       </template>
     </vue-plyr>
-    <tabs-code :data="codeData" v-if="highlight" />
+    <span v-html="style()"></span>
   </div>
 </template>
 
@@ -29,40 +29,29 @@ export default {
   components: { VuePlyr },
   data() {
     return {
-      codeData: [
-        {
-          label: "html",
-          lang: "html",
-          code: `<im-player />`
-        },
-        {
-          label: "css",
-          lang: "css",
-          code: ""
-        },
-        {
-          label: "js",
-          lang: "js",
-          code: ``
-        }
-      ],
-      base: {
-        option: {
-          src: "bTqVqk7FSmY",
-          provider: "youtube"
-        },
-        style: {},
-        data: {}
+      option: {
+        src: "bTqVqk7FSmY",
+        provider: "youtube"
       },
-      highlight: false,
+      data: {},
       reInit: false
     }
   },
   watch: {
-    base: {
-      handler(val) {
-        // do stuff
-        console.log(val)
+    option: {
+      handler() {
+        // hack re-render
+        let vm = this
+        vm.reInit = false
+        vm.$nextTick(() => {
+          vm.reInit = true
+        })
+      },
+      deep: true
+    },
+    data: {
+      handler() {
+        // hack re-render
         let vm = this
         vm.reInit = false
         vm.$nextTick(() => {
@@ -72,16 +61,24 @@ export default {
       deep: true
     }
   },
+  methods: {
+    style() {
+      let vm = this
+
+      const style = vm.$slots["style"]
+      if (style) {
+        const dom = style[0].data.domProps
+        if (dom) {
+          return "<style scoped>" + dom.innerHTML.trim() + "</style>"
+        }
+      }
+      return ""
+    }
+  },
   mounted() {
     var vm = this
     vm.reInit = true //create dom
-
-    window.addEventListener("message", function(e) {
-      let data = e.data
-      if (data.type && data.type === "imodule") {
-        vm.base = e.data
-      }
-    })
+    console.log(vm.$slots)
   }
 }
 </script>
