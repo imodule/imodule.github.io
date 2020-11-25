@@ -19,8 +19,18 @@
         toggle: true,
         dark: true,
         menu: [
-          { label: "Home", icon: "ti-user", link: "/", children: [{ label: "My Account" }] },
-          { title: "Player", label: "Player", icon: "ti-settings", link: "/player", children: [{ label: "Menu Extent", }] }
+          { label: "Home", icon: "ti-home", link: "/" },
+          { title: "Media", label: "Player", icon: "ti-control-play",
+            children: [
+              { label: "Player Default", link: "/player" },
+              { label: "Player Theme 1", link: "/player/theme" },
+            ]
+          },
+          { title: "Data Table", label: "Table", icon: "ti-layout-grid3",
+            children: [
+              { label: "Table Default", link: "/table" },
+            ]
+          },
         ]
       }
     },

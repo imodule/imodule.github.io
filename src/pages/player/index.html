@@ -33,11 +33,11 @@
         <div class="header-logo"><img src="<%= BASE_URL %>img/logo.png" /></div>
       </template>
       <template slot="default">
-        <im-player id="imPlayer">
+        <im-player id="im_player">
         </im-player>
         <tab-markdown>
           <textarea vue-slot="tab-code">
-            <im-player id="imPlayer">
+            <im-player id="im_player">
               <span vue-slot="style">
                 //edit css class (See tab "style")
                 .wrap-player{background: transparent}
@@ -45,9 +45,9 @@
             </im-player>
     
             <script>
-              var imPlayer = document.querySelector('#imPlayer');
+              var im_player = document.querySelector('#im_player');
               // config 
-              imPlayer.base = {
+              im_player.base = {
                 option: {}, //See tab "option"
                 data: {} //See tab "data"
               }
@@ -64,7 +64,7 @@
             | --------- | ----------- | ---- | --------------- | ------- |
           </textarea>
           <textarea vue-slot="tab-style">
-            .a{
+            .selector{
               color: #333;
             }
           </textarea>
@@ -81,10 +81,10 @@
   <script>
     window.addEventListener('load', (event) => {
       console.log('waiting loaded script');
-      var imPlayer = document.querySelector('#imPlayer');
-      console.log(imPlayer)
+      var im_player = document.querySelector('#im_player');
+      console.log(im_player)
       // config 
-      imPlayer.base = {
+      im_player.base = {
         option: {
           src: "bTqVqk7FSmY",
           provider: "youtube"

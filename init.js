@@ -19,12 +19,17 @@ window.onload = function(){
         dark: true,
         menu: [
           { label: "Home", icon: "ti-home", link: "/" },
-          { title: "Player", label: "Player", icon: "ti-control-play",
+          { title: "Media", label: "Player", icon: "ti-control-play",
             children: [
-              { label: "Player default", link: "/player" },
-              { label: "Player theme 1", link: "/player/theme" }
+              { label: "Player Default", link: "/player" },
+              { label: "Player Theme 1", link: "/player/theme" },
             ]
-          }
+          },
+          { title: "Data Table", label: "Table", icon: "ti-layout-grid3",
+            children: [
+              { label: "Table Default", link: "/table" },
+            ]
+          },
         ]
       }
     },

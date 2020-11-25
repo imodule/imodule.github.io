@@ -31,7 +31,7 @@
 <script>
 import VuePlyr from "@/components/player/VuePlyr"
 export default {
-  name: "imPlayer",
+  name: "im-player",
   components: { VuePlyr },
   props: {
     base: {

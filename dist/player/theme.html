@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=/icon/themify-icons.css><link rel=stylesheet href=/css/vue-bone.css><link rel=stylesheet href=/css/vue-tab-markdown.css><title></title><style>#main-wrap {
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=/icon/themify-icons.css><link rel=stylesheet href=/css/vue-bone.css><link rel=stylesheet href=/css/vue-tab-markdown.css><title>player-theme1</title><style>#main-wrap {
       padding: 1rem
     }
 
     #main tab-markdown>div {
       margin-top: 1rem;
-    }</style><link href=/css/player/index.css rel=preload as=style><link href=/js/player/index.js rel=preload as=script><link href=/css/player/index.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-player id=imPlayer></im-player><tab-markdown><textarea vue-slot=tab-code>
-            <im-player id=imPlayer>
+    }</style><link href=/css/player/theme.css rel=preload as=style><link href=/js/player/theme.js rel=preload as=script><link href=/css/player/theme.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-player id=im_player></im-player><tab-markdown><textarea vue-slot=tab-code>
+            <im-player id=im_player>
               <span vue-slot=style>
                 //edit css class (See tab "style")
                 .wrap-player{background: transparent}
@@ -13,9 +13,9 @@
             </im-player>
     
             <script>
-              var imPlayer = document.querySelector('#imPlayer');
+              var im_player = document.querySelector('#im_player');
               // config 
-              imPlayer.base = {
+              im_player.base = {
                 option: {}, //See tab "option"
                 data: {} //See tab "data"
               }
@@ -29,7 +29,7 @@
             | Attribute |	Description |	Type | Accepted Values | Default |
             | --------- | ----------- | ---- | --------------- | ------- |
           </textarea> <textarea vue-slot=tab-style>
-            .a{
+            .selector{
               color: #333;
             }
           </textarea></tab-markdown></template></im-bone></div><script src=/js/vue.min.js></script><script src=/js/element-ui.js></script><script src=/js/vue-bone.js></script><script src=/js/vue-tab-markdown.js></script><script>window.onload = function(){
@@ -51,8 +51,18 @@
         toggle: true,
         dark: true,
         menu: [
-          { label: "Home", icon: "ti-user", link: "/", children: [{ label: "My Account" }] },
-          { title: "Player", label: "Player", icon: "ti-settings", link: "/player", children: [{ label: "Menu Extent", }] }
+          { label: "Home", icon: "ti-home", link: "/" },
+          { title: "Media", label: "Player", icon: "ti-control-play",
+            children: [
+              { label: "Player Default", link: "/player" },
+              { label: "Player Theme 1", link: "/player/theme" },
+            ]
+          },
+          { title: "Data Table", label: "Table", icon: "ti-layout-grid3",
+            children: [
+              { label: "Table Default", link: "/table" },
+            ]
+          },
         ]
       }
     },
@@ -81,14 +91,14 @@
   });
 }</script><script>window.addEventListener('load', (event) => {
       console.log('waiting loaded script');
-      var imPlayer = document.querySelector('#imPlayer');
-      console.log(imPlayer)
+      var im_player = document.querySelector('#im_player');
+      console.log(im_player)
       // config 
-      imPlayer.base = {
+      im_player.base = {
         option: {
           src: "bTqVqk7FSmY",
           provider: "youtube"
         }, //See tab "option"
         data: {} //See tab "data"
       }
-    });</script><script src=/js/player/index.js></script></body></html>
+    });</script><script src=/js/player/theme.js></script></body></html>
