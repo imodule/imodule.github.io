@@ -11,8 +11,7 @@
     "element-ui": "^2.4.6",
     "plyr": "^3.6.2",
     "vue": "^2.5.17",
-    "vue-custom-element": "^3.2.14",
-    "vue-markdown": "^2.2.4"
+    "vue-custom-element": "^3.2.14"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.1",

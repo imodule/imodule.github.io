@@ -22,6 +22,7 @@ glob.sync("./src/pages/**/app.js").forEach(path => {
 // console.log(patterns)
 module.exports = {
   pages,
+  productionSourceMap: false,
   chainWebpack: config => {
     config.optimization.delete("splitChunks")
     //render extent for html
