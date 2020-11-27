@@ -1,7 +1,7 @@
 <template>
   <div class="wrap-table">
     <Table
-      :class="{ dark: base.option.dark }"
+      :class="{ dark: base.option.dark, 'table-border': base.option.border }"
       :table-height="base.option.height"
       :table-data="base.data.cells"
       :table-columns="base.data.columns"

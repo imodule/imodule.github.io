@@ -1,7 +1,8 @@
 <template>
-  <div class="dark wrap-form" v-if="reInit">
+  <div class="wrap-form" v-if="reInit">
     <im-form-builder
       ref="form"
+      :class="{ dark: true }"
       v-model="model"
       :schema="schema"
       :options="schema.formOptions"

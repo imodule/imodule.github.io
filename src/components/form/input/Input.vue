@@ -168,10 +168,10 @@ export default {
   }
   &__prepend {
     display: table-cell;
-    border-left: $input-border;
-    border-top: $input-border;
+    border: $input-border;
+    border-right-color: transparent;
     border-bottom: $input-border;
-    color: $color-text-faded-low;
+    color: $color-text-lighten;
     padding: $input-inner-padding;
     border-top-left-radius: $input-border-radius;
     border-bottom-left-radius: $input-border-radius;
@@ -182,13 +182,12 @@ export default {
   }
   &__append {
     display: table-cell;
-    border-top: $input-border;
-    border-right: $input-border;
-    border-bottom: $input-border;
+    border: $input-border;
+    border-left-color: transparent;
     border-top-right-radius: $input-border-radius;
     border-bottom-right-radius: $input-border-radius;
     padding: $input-inner-padding;
-    color: $color-text-faded-low;
+    color: $color-text-lighten;
     background-color: $color-base-hover;
     position: relative;
     width: 1px;
@@ -235,17 +234,15 @@ export default {
     color: $dark-color-text-regular;
   }
   &__prepend {
-    border-left: $dark-input-border;
-    border-top: $dark-input-border;
-    border-bottom: $dark-input-border;
-    color: $dark-color-text-faded-low;
+    border: $dark-input-border;
+    border-right-color: transparent;
+    color: $dark-color-text-lighten;
     background-color: $dark-color-base-hover;
   }
   &__append {
-    border-top: $dark-input-border;
-    border-right: $dark-input-border;
-    border-bottom: $dark-input-border;
-    color: $dark-color-text-faded-low;
+    border: $dark-input-border;
+    border-left-color: transparent;
+    color: $dark-color-text-lighten;
     background-color: $dark-color-base-hover;
   }
 }

@@ -334,32 +334,16 @@ export default {
 }
 </script>
 <style lang="scss">
-$bg: #fff;
-$bgActive: #f5f7f9;
-$bgFocus: #ebf7ff;
-$bgBold: #cee6f9;
-$color: #555;
-$borderColor: #c4c6c7;
-$barColor: #f5f5f5;
-$barColorActive: #d2d2d2;
-
-$darkBg: #36404a;
-$darkBgActive: #2f3740;
-$darkBgFocus: #45515f;
-$darkBgBold: #2a5b82;
-$darkColor: #a2a8b5;
-$darkBorderColor: #2a3139;
-$darkBarColor: #4a5663;
-$darkBarColorActive: #657688;
+@import "~@/assets/scss/variables";
 
 .all-table-wrap {
   width: 100%;
   position: relative;
   cursor: default;
-  background-color: $bg;
+  background-color: $color-base-hover;
 }
 .dark.all-table-wrap {
-  background-color: $darkBg;
+  background-color: $dark-color-base-hover;
 }
 
 .all-table-wrap * {
@@ -367,13 +351,14 @@ $darkBarColorActive: #657688;
 }
 
 .all-table-wrap thead th {
-  background-color: $bgBold;
+  background-color: $color-primary;
   height: 40px;
   padding: 8px;
   text-transform: capitalize;
 }
 .dark.all-table-wrap thead th {
-  background-color: $darkBgBold;
+  background-color: $dark-color-primary;
+  border-color: $dark-color-primary;
 }
 
 .table-style {
@@ -384,40 +369,61 @@ $darkBarColorActive: #657688;
 
 .table-style th {
   font-size: 13px;
-  color: $color;
-  border: 1px solid $borderColor;
+  border: $input-border;
+  color: $color-text-regular;
+  border-color: $color-primary;
+}
+.table-border th {
+  border: $input-border !important;
 }
 .dark .table-style th {
-  color: $darkColor;
-  border-color: $darkBorderColor;
+  color: $dark-color-text-lighten;
+  border-color: $dark-color-primary;
+}
+.dark.table-border th {
+  border: $dark-input-border !important;
 }
 
 .tr-hover {
-  background-color: $bgFocus !important;
+  background-color: $color-base !important;
 }
 .dark .tr-hover {
-  background-color: $darkBgFocus !important;
+  background-color: $dark-color-base !important;
 }
 
 .table-style tbody tr:nth-child(even) {
-  background: $bgActive;
+  background: $color-base-focus;
 }
 .dark .table-style tbody tr:nth-child(even) {
-  background: $darkBgActive;
+  background: $dark-color-base-focus;
 }
 
 .table-style td {
   padding: 8px;
   font-size: 12px;
   text-align: left;
-  color: $color;
-  border: 1px solid $borderColor;
+  color: $color-text-regular;
+  border: $input-border;
+  border-left-color: transparent;
+  border-right-color: transparent;
   max-width: 600px;
   white-space: normal;
 }
+.table-border td,
+.table-border th {
+  border-left-color: $color-border !important;
+  border-right-color: $color-border !important;
+}
 .dark .table-style td {
-  color: $darkColor;
-  border-color: $darkBorderColor;
+  color: $dark-color-text-regular;
+  border: $dark-input-border;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.dark.table-border td,
+.dark.table-border th {
+  border-left-color: $dark-color-border !important;
+  border-right-color: $dark-color-border !important;
 }
 
 .table-style td > * {
@@ -436,14 +442,14 @@ $darkBarColorActive: #657688;
 }
 
 .fixRow-table {
-  background-color: $bg;
+  background-color: $color-base-hover;
   position: relative;
   overflow: hidden;
   margin-right: 10px; /*fix*/
   z-index: 22;
 }
 .dark .fixRow-table {
-  background-color: $bg;
+  background-color: $dark-color-base-hover;
 }
 
 .table-t {
@@ -459,35 +465,35 @@ $darkBarColorActive: #657688;
 .table-wrap::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  background-color: $barColor;
+  background-color: $color-base-visited;
 }
 .dark .table-wrap::-webkit-scrollbar {
-  background-color: $darkBarColor;
+  background-color: $dark-color-base-visited;
 }
 
 .table-wrap::-webkit-scrollbar-track {
   box-shadow: inset 0 1 6px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  background-color: $barColor;
+  background-color: $color-base-visited;
 }
 .dark .table-wrap::-webkit-scrollbar-track {
-  background-color: $darkBarColor;
+  background-color: $dark-color-base-visited;
 }
 
 .table-wrap::-webkit-scrollbar-thumb {
   border-radius: 5px;
   box-shadow: inset 0 1 6px rgba(0, 0, 0, 0.3);
-  background-color: $barColorActive;
+  background-color: $color-base;
 }
 .dark .table-wrap::-webkit-scrollbar-thumb {
-  background-color: $darkBarColorActive;
+  background-color: $dark-color-base;
 }
 
 .table-wrap::-webkit-scrollbar-corner {
-  background-color: $barColor;
+  background-color: $color-base-visited;
 }
 .dark .table-wrap::-webkit-scrollbar-corner {
-  background-color: $darkBarColor;
+  background-color: $dark-color-base-visited;
 }
 
 .table-fix-tbody-wrap {
@@ -498,11 +504,11 @@ $darkBarColorActive: #657688;
 .fixLeftCol-table-wrap-title {
   position: absolute;
   top: 0;
-  background-color: $bg;
+  background-color: $color-base-hover;
   z-index: 99;
 }
 .dark .fixLeftCol-table-wrap-title {
-  background-color: $darkBg;
+  background-color: $dark-color-base-hover;
 }
 
 /*Left side of body*/
@@ -510,13 +516,13 @@ $darkBarColorActive: #657688;
 .fixLeftCol-table-wrap {
   overflow: hidden;
   position: absolute;
-  background-color: $bg;
+  background-color: $color-base-hover;
   z-index: 33;
   top: 0;
   box-shadow: 2px 0 8px -2px rgba(0, 0, 0, 0.15);
 }
 .dark .fixLeftCol-table-wrap {
-  background-color: $darkBg;
+  background-color: $dark-color-base-hover;
 }
 /*
 .fixLeftCol-table-wrap tr {
@@ -527,24 +533,24 @@ $darkBarColorActive: #657688;
   position: absolute;
   top: 0;
   right: 10px;
-  background-color: $bg;
+  background-color: $color-base-hover;
   z-index: 99;
 }
 .dark .fixRightCol-table-wrap-title {
-  background-color: $darkBg;
+  background-color: $dark-color-base-hover;
 }
 
 .fixRightCol-table-wrap {
   overflow: hidden;
   position: absolute;
-  background-color: $bg;
+  background-color: $color-base-hover;
   z-index: 33;
   top: 0;
   right: 10px;
   box-shadow: -2px 0 8px -2px rgba(0, 0, 0, 0.15);
 }
 .dark .fixRightCol-table-wrap {
-  background-color: $darkBg;
+  background-color: $dark-color-base-hover;
 }
 /*When the data is not too much and there is no scroll bar on the right*/
 

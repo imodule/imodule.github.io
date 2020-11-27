@@ -19,7 +19,7 @@
     transition: border-color 0.3s;
   }
   &::-webkit-input-placeholder {
-    color: $color-text-faded;
+    color: $color-text-lighten;
   }
 }
 
@@ -41,7 +41,7 @@
     transition: border-color 0.3s;
   }
   &::-webkit-input-placeholder {
-    color: $dark-color-text-faded;
+    color: $dark-color-text-darken-low;
   }
 }
 /*------------------------------------*/
