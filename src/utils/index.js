@@ -8,3 +8,7 @@ export function cloneShallow(obj) {
     return acc
   }, {})
 }
+
+export function isEmptyObj(obj) {
+  return Object.keys(obj).length === 0 && obj.constructor === Object
+}

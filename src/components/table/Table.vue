@@ -431,7 +431,10 @@ export default {
 }
 
 .table-style tbody > tr:first-child > td {
-  border-top-color: transparent;
+  border-top-color: $color-primary;
+}
+.dark .table-style tbody > tr:first-child > td {
+  border-top-color: $dark-color-primary;
 }
 
 .table-wrap {
