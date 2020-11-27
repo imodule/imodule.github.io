@@ -91,10 +91,7 @@
           <tbody>
             <template v-if="tableData.length == 0">
               <tr>
-                <td
-                  :colspan="tableColumnsFix.allCol.length"
-                  style="text-align:center"
-                >
+                <td :colspan="tableColumnsFix.allCol.length">
                   No data
                 </td>
               </tr>
@@ -182,7 +179,7 @@
 
 <script>
 export default {
-  name: "VueTable",
+  name: "imTable",
   props: {
     tableHeight: {
       type: Number,
@@ -412,7 +409,7 @@ $darkBarColorActive: #657688;
 .table-style td {
   padding: 8px;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
   color: $color;
   border: 1px solid $borderColor;
   max-width: 600px;

@@ -8,7 +8,7 @@
 import Plyr from "plyr"
 
 export default {
-  name: "VuePlyr",
+  name: "im-plyr",
   props: {
     /** Options object for plyr config. **/
     options: {

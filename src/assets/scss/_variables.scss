@@ -1,0 +1,46 @@
+/*------------------------------------*/
+/*  COLORS  */
+/*------------------------------------*/
+$color-primary: #498aed;
+$color-success: #68cc68;
+$color-warning: #efc669;
+$color-danger: #e4474e;
+$color-text-regular: #303133;
+$color-text-faded: lighten($color-text-regular, 40%);
+$color-text-faded-low: lighten($color-text-regular, 50%);
+$color-base-active: #aaa; // normal dark
+$color-base-focus: #bbb; // normal light
+$color-base: #ddd;
+$color-base-hover: #f6f6f6; // normal lighter
+$color-base-visited: #fff; // normal darker
+$color-border: $color-base;
+/*------------------------------------*/
+/*  DARK COLORS */
+/*------------------------------------*/
+$dark-color-primary: #498aed;
+$dark-color-success: #68cc68;
+$dark-color-warning: #efc669;
+$dark-color-danger: #e4474e;
+$dark-color-text-regular: #969dad;
+$dark-color-text-faded: darken($dark-color-text-regular, 20%);
+$dark-color-text-faded-low: darken($dark-color-text-regular, 30%);
+$dark-color-base-active: #272d33; // normal dark
+$dark-color-base-focus: #313840; // normal light
+$dark-color-base: #424e5a;
+$dark-color-base-hover: #3b4651; // normal lighter
+$dark-color-base-visited: #2f363e; // normal darker
+$dark-color-border: $dark-color-base;
+/*------------------------------------*/
+/*  FONTS  */
+/*------------------------------------*/
+$font: Helvetica, Arial, sans-serif;
+/*------------------------------------*/
+/*  FROM  */
+/*------------------------------------*/
+$input-font-size: 14px;
+$input-height: 40px;
+$input-inner-padding: 0 15px;
+$input-border-radius: 4px;
+$input-border: 1px solid $color-border;
+
+$dark-input-border: 1px solid $dark-color-border;

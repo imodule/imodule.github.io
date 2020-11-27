@@ -30,6 +30,11 @@ window.onload = function(){
               { label: "Table Default", link: "/table" },
             ]
           },
+          { title: "Form", label: "Form", icon: "ti-pencil-alt",
+            children: [
+              { label: "Form Default", link: "/form" },
+            ]
+          },
         ]
       }
     },

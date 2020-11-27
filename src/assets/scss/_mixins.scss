@@ -1,0 +1,70 @@
+/*------------------------------------*/
+/* FORM */
+/*------------------------------------*/
+@mixin form-input-default() {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: $input-border-radius;
+  outline: none;
+  border: $input-border;
+  line-height: $input-height;
+  padding: $input-inner-padding;
+  height: $input-height;
+  background-color: $color-base-visited;
+  font-size: 14px;
+  color: $color-text-regular;
+  transition: border-color 0.3s;
+  &:focus {
+    border-color: $color-primary;
+    transition: border-color 0.3s;
+  }
+  &::-webkit-input-placeholder {
+    color: $color-text-faded;
+  }
+}
+
+@mixin dark-form-input-default() {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: $input-border-radius;
+  outline: none;
+  border: $dark-input-border;
+  line-height: $input-height;
+  padding: $input-inner-padding;
+  height: $input-height;
+  background-color: $dark-color-base-visited;
+  font-size: 14px;
+  color: $dark-color-text-regular;
+  transition: border-color 0.3s;
+  &:focus {
+    border-color: $dark-color-primary;
+    transition: border-color 0.3s;
+  }
+  &::-webkit-input-placeholder {
+    color: $dark-color-text-faded;
+  }
+}
+/*------------------------------------*/
+/*  BUTTON  */
+/*------------------------------------*/
+@mixin button-hover-active(
+  $bg-color,
+  $text-color,
+  $lighten-amount,
+  $darken-amount
+) {
+  background-color: $bg-color;
+  border-color: $bg-color;
+  color: $text-color;
+  &:hover {
+    background-color: lighten($bg-color, $lighten-amount);
+  }
+  &:active {
+    background-color: darken($bg-color, $darken-amount);
+  }
+}
+@mixin button-disabled($main-color, $lighten-amount) {
+  background-color: lighten($main-color, $lighten-amount);
+  border-color: lighten($main-color, $lighten-amount);
+  cursor: no-drop;
+}

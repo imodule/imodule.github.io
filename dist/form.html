@@ -1,21 +1,21 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=/icon/themify-icons.css><link rel=stylesheet href=/css/vue-bone.css><link rel=stylesheet href=/css/vue-tab-markdown.css><title>player-page</title><style>#main-wrap {
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=/icon/themify-icons.css><link rel=stylesheet href=/css/vue-bone.css><link rel=stylesheet href=/css/vue-tab-markdown.css><title>form-page</title><style>#main-wrap {
       padding: 1rem
     }
 
     #main tab-markdown>div {
       margin-top: 1rem;
-    }</style><link href=/css/player.css rel=preload as=style><link href=/js/player.js rel=preload as=script><link href=/css/player.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-player id=im_player></im-player><tab-markdown><textarea vue-slot=tab-code>
-            <im-player id=im_player>
+    }</style><link href=/css/form.css rel=preload as=style><link href=/js/form.js rel=preload as=script><link href=/css/form.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-form id=im_form></im-form><tab-markdown><textarea vue-slot=tab-code>
+            <im-form id=im_form>
               <span vue-slot=style>
                 //edit css class (See tab "style")
-                .wrap-player{background: transparent}
+                .wrap-form{background: transparent}
               </span>
-            </im-player>
+            </im-form>
     
             <script>
-              var im_player = document.querySelector('#im_player');
+              var im_form = document.querySelector('#im_form');
               // config 
-              im_player.base = {
+              im_form.base = {
                 option: {}, //See tab "option"
                 data: {} //See tab "data"
               }
@@ -96,14 +96,14 @@
   });
 }</script><script>window.addEventListener('load', (event) => {
       console.log('waiting loaded script');
-      var im_player = document.querySelector('#im_player');
-      console.log(im_player)
+      var im_form = document.querySelector('#im_form');
+      console.log(im_form)
       // config 
-      im_player.base = {
+      im_form.base = {
         option: {
           src: "bTqVqk7FSmY",
           provider: "youtube"
         }, //See tab "option"
         data: {} //See tab "data"
       }
-    });</script><script src=/js/player.js></script></body></html>
+    });</script><script src=/js/form.js></script></body></html>
