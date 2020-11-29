@@ -5,7 +5,7 @@
       :class="{ dark: true }"
       v-model="base.data.model"
       :schema="base.data.schema"
-      :options="base.data.schema.formOptions"
+      :options="base.option"
       @action="onAction"
     >
     </im-form-builder>
@@ -34,6 +34,7 @@ export default {
         let vm = this
         if (!isEmptyObj(val)) {
           vm.reInit = true
+          vm.style()
         } else {
           vm.reInit = false
         }
@@ -46,6 +47,7 @@ export default {
       let vm = this
 
       const style = vm.$slots["style"]
+      console.log(style)
       if (style) {
         const dom = style[0].data.domProps
         if (dom) {

@@ -34,6 +34,9 @@
       </template>
       <template slot="default">
         <im-player id="im_player">
+          <span vue-slot="style">
+            .wrap-player{background: transparent}
+          </span>
         </im-player>
         <tab-markdown>
           <textarea vue-slot="tab-code">
@@ -43,7 +46,7 @@
                 .wrap-player{background: transparent}
               </span>
             </im-player>
-    
+
             <script>
               var im_player = document.querySelector('#im_player');
               // config 
@@ -64,9 +67,8 @@
             | --------- | ----------- | ---- | --------------- | ------- |
           </textarea>
           <textarea vue-slot="tab-style">
-            .selector{
-              color: #333;
-            }
+            //edit css class (See tab "style")
+            .wrap-player{background: transparent}
           </textarea>
         </tab-markdown>
       </template>

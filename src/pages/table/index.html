@@ -34,6 +34,9 @@
       </template>
       <template slot="default">
         <im-table id="im_table">
+          <span vue-slot="style">
+            .wrap-table{background: transparent}
+          </span>
         </im-table>
         <tab-markdown>
           <textarea vue-slot="tab-code">
@@ -43,7 +46,7 @@
                 .wrap-table{background: transparent}
               </span>
             </im-table>
-    
+
             <script>
               var im_table = document.querySelector('#im_table');
               // config 
@@ -140,9 +143,8 @@
             | cells | Table Cells (main data) | Array | ~ | ~ |
           </textarea>
           <textarea vue-slot="tab-style">
-            .selector{
-              color: #333;
-            }
+            //edit css class (See tab "style")
+            .wrap-player{background: transparent}
           </textarea>
         </tab-markdown>
       </template>

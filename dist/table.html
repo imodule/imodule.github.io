@@ -18,6 +18,7 @@
               im_table.base = {
                 option: {
                   dark: true,
+                  border: false,
                   height: 600
                 }, //See tab "option"
                 data: {
@@ -104,9 +105,8 @@
             | columns | Table Columns | Array | ~ | ~ |
             | cells | Table Cells (main data) | Array | ~ | ~ |
           </textarea> <textarea vue-slot=tab-style>
-            .selector{
-              color: #333;
-            }
+            //edit css class (See tab "style")
+            .wrap-player{background: transparent}
           </textarea></tab-markdown></template></im-bone></div><script src=/js/vue.min.js></script><script src=/js/element-ui.js></script><script src=/js/vue-bone.js></script><script src=/js/vue-tab-markdown.js></script><script>window.onload = function(){
   var app = new Vue({
     el: '#page',
@@ -177,6 +177,7 @@
       im_table.base = {
         option: {
           dark: true,
+          border: false,
           height: 340
         }, //See tab "option"
         data: {

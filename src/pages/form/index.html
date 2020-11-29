@@ -34,16 +34,19 @@
       </template>
       <template slot="default">
         <im-form id="im_form">
+          <span vue-slot="style">
+            .wrap-form{max-width: 400px}
+          </span>
         </im-form>
         <tab-markdown>
           <textarea vue-slot="tab-code">
             <im-form id="im_form">
               <span vue-slot="style">
                 //edit css class (See tab "style")
-                .wrap-form{background: transparent}
+                .wrap-form{max-width: 400px}
               </span>
             </im-form>
-    
+
             <script>
               var im_form = document.querySelector('#im_form');
               // config 
@@ -64,9 +67,8 @@
             | --------- | ----------- | ---- | --------------- | ------- |
           </textarea>
           <textarea vue-slot="tab-style">
-            .selector{
-              color: #333;
-            }
+            //edit css class (See tab "style")
+            .wrap-form{background: transparent}
           </textarea>
         </tab-markdown>
       </template>
@@ -86,8 +88,8 @@
       // config 
       im_form.base = {
         option: {
-          src: "bTqVqk7FSmY",
-          provider: "youtube"
+          labelPosition: 'right',
+          labelWidth: '120px'
         }, //See tab "option"
         data: {
           model: {

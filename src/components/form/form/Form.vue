@@ -44,7 +44,7 @@ export default {
 
 .im-form {
   $r: &;
-  width: 400px;
+  width: 100%;
   &--label-right {
     #{$r}__item-label {
       text-align: right;
@@ -83,6 +83,19 @@ export default {
     }
     &-validate {
       overflow: hidden;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .im-form {
+    $r: &;
+    #{$r}__item {
+      flex-flow: column;
+      &-label {
+        flex-basis: auto !important;
+        align-self: flex-start;
+        margin-bottom: 15px;
+      }
     }
   }
 }

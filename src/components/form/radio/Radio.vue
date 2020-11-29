@@ -111,6 +111,7 @@ export default {
     box-sizing: border-box;
   }
   &--checked {
+    color: $color-primary;
     #{$r}__inner {
       background-color: $color-primary;
       border-color: $color-primary;
@@ -164,6 +165,7 @@ export default {
     background-color: $dark-color-base-visited;
   }
   &--checked {
+    color: $dark-color-primary;
     #{$r}__inner {
       background-color: $dark-color-primary;
       border-color: $dark-color-primary;
