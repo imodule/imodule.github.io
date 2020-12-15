@@ -4,16 +4,14 @@
 
     #main tab-markdown>div {
       margin-top: 1rem;
-    }</style><link href=/css/form.css rel=preload as=style><link href=/js/form.js rel=preload as=script><link href=/css/form.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-form id=im_form><textarea vue-slot=tab-style>
-            .wrap-form{max-width: 400px}
-          </textarea></im-form><tab-markdown><textarea vue-slot=tab-code>
+    }</style><link href=/css/form.css rel=preload as=style><link href=/js/form.js rel=preload as=script><link href=/css/form.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-form id=im_form><span vue-slot=style>.wrap-form{max-width: 400px}</span></im-form><tab-markdown><textarea vue-slot=tab-code>
             <im-form id=im_form>
               <span vue-slot=style>
                 //edit css class (See tab "style")
-                .wrap-form{background: transparent}
+                .wrap-form{max-width: 400px}
               </span>
             </im-form>
-    
+
             <script>
               var im_form = document.querySelector('#im_form');
               // config 
