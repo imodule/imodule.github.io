@@ -187,15 +187,11 @@ export default {
     },
     tableData: {
       type: Array,
-      default: () => {
-        return []
-      }
+      default: () => []
     },
     tableColumns: {
       type: Array,
-      default: () => {
-        return []
-      }
+      default: () => []
     }
   },
   data: function() {
@@ -234,13 +230,16 @@ export default {
   },
   watch: {
     //The table data is updated and the table is fixed
-    tableData: function() {
-      let vm = this
-      vm.$nextTick(function() {
-        vm.checkFix()
-        vm.calcTableFixHeight()
-        vm.calcHeightRows()
-      })
+    tableData: {
+      immediate: true,
+      handler: function() {
+        let vm = this
+        vm.$nextTick(function() {
+          vm.checkFix()
+          vm.calcTableFixHeight()
+          vm.calcHeightRows()
+        })
+      }
     },
     tableColumns: function() {
       this.$nextTick(function() {
@@ -269,10 +268,12 @@ export default {
     checkFix: function() {
       let vm = this
       let ths = vm.$refs.tableTrue.querySelectorAll("th")
-      for (let i = 0; i < vm.tableColumns.length; i++) {
-        //Set the width of each column
-        let allCol = vm.tableColumnsFix.allCol[i]
-        vm.$set(allCol, "width", allCol.width || ths.item(i).clientWidth)
+      if (ths) {
+        for (let i = 0; i < vm.tableColumns.length; i++) {
+          //Set the width of each column
+          let allCol = vm.tableColumnsFix.allCol[i]
+          vm.$set(allCol, "width", allCol.width || ths.item(i).clientWidth)
+        }
       }
     },
     calcHeightRows: function() {
@@ -368,6 +369,7 @@ export default {
 }
 
 .table-style th {
+  text-align: left;
   font-size: 13px;
   border: $input-border;
   color: $color-text-regular;
