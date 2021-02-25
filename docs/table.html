@@ -1,12 +1,12 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><link rel=stylesheet href=/icon/themify-icons.css><link rel=stylesheet href=/css/vue-bone.css><link rel=stylesheet href=/css/vue-tab-markdown.css><title></title><style>#main-wrap {
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/icon/themify-icons.css"><link rel="stylesheet" href="/css/vue-bone.css"><link rel="stylesheet" href="/css/vue-tab-markdown.css"><title></title><style>#main-wrap {
       padding: 1rem
     }
 
     #main tab-markdown>div {
       margin-top: 1rem;
-    }</style><link href=/css/table.css rel=preload as=style><link href=/js/table.js rel=preload as=script><link href=/css/table.css rel=stylesheet></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=page><im-bone @clicked=onClicked :header-data=headerData :nav-left-data=navLeftData :background-color=backgroundColor :menu-float=menuFloat><template :slot=slotLogo><div class=header-logo><img src=/img/logo.png></div></template><template slot=default><im-table id=im_table><span vue-slot=style>.wrap-table{background: transparent}</span></im-table><tab-markdown><textarea vue-slot=tab-code>
-            <im-table id=im_table>
-              <span vue-slot=style>
+    }</style><link href="/css/table.css" rel="preload" as="style"><link href="/js/table.js" rel="preload" as="script"><link href="/css/table.css" rel="stylesheet"></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="page"><im-bone @clicked="onClicked" :header-data="headerData" :nav-left-data="navLeftData" :background-color="backgroundColor" :menu-float="menuFloat"><template :slot="slotLogo"><div class="header-logo"><img src="/img/logo.png"></div></template><template slot="default"><im-table id="im_table"><span vue-slot="style">.wrap-table{background: transparent}</span></im-table><tab-markdown><textarea vue-slot="tab-code">
+            <im-table id="im_table">
+              <span vue-slot="style">
                 //edit css class (See tab "style")
                 .wrap-table{background: transparent}
               </span>
@@ -94,20 +94,20 @@
                 } //See tab "data"
               }
             </script>
-          </textarea> <textarea vue-slot=tab-option>
+          </textarea> <textarea vue-slot="tab-option">
             | Attribute |	Description |	Type | Accepted Values | Default |
             | --------- | ----------- | ---- | --------------- | ------- |
             | dark | Dark Theme | Boolean | true/false | false |
             | height | Table Height | Number | ~ | 600 |
-          </textarea> <textarea vue-slot=tab-data>
+          </textarea> <textarea vue-slot="tab-data">
             | Attribute |	Description |	Type | Accepted Values | Default |
             | --------- | ----------- | ---- | --------------- | ------- |
             | columns | Table Columns | Array | ~ | ~ |
             | cells | Table Cells (main data) | Array | ~ | ~ |
-          </textarea> <textarea vue-slot=tab-style>
+          </textarea> <textarea vue-slot="tab-style">
             //edit css class (See tab "style")
             .wrap-player{background: transparent}
-          </textarea></tab-markdown></template></im-bone></div><script src=/js/vue.min.js></script><script src=/js/element-ui.js></script><script src=/js/vue-bone.js></script><script src=/js/vue-tab-markdown.js></script><script>window.onload = function(){
+          </textarea></tab-markdown></template></im-bone></div><script src="/js/vue.min.js"></script><script src="/js/vue-custom-element.min.js"></script><script src="/js/element-ui.js"></script><script src="/js/vue-bone.js"></script><script src="/js/vue-tab-markdown.js"></script><script>window.onload = function(){
   var app = new Vue({
     el: '#page',
     data: {
@@ -126,21 +126,19 @@
         toggle: true,
         dark: true,
         menu: [
-          { label: "Home", icon: "ti-home", link: "/" },
           { title: "Media", label: "Player", icon: "ti-control-play",
             children: [
-              { label: "Player Default", link: "/player" },
-              { label: "Player Theme 1", link: "/player/theme" },
+              { label: "Player Default", link: "/player.html" },
             ]
           },
           { title: "Data Table", label: "Table", icon: "ti-layout-grid3",
             children: [
-              { label: "Table Default", link: "/table" },
+              { label: "Table Default", link: "/table.html" },
             ]
           },
           { title: "Form", label: "Form", icon: "ti-pencil-alt",
             children: [
-              { label: "Form Default", link: "/form" },
+              { label: "Form Default", link: "/form.html" },
             ]
           },
         ]
@@ -308,4 +306,4 @@
           ]
         } //See tab "data"
       }
-    });</script><script src=/js/table.js></script></body></html>
+    });</script><script src="/js/table.js"></script></body></html>

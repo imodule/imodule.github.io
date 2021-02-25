@@ -18,19 +18,21 @@ window.onload = function(){
         toggle: true,
         dark: true,
         menu: [
+          { label: "Home", icon: "ti-home", link: "/" },
           { title: "Media", label: "Player", icon: "ti-control-play",
             children: [
-              { label: "Player Default", link: "/player.html" },
+              { label: "Player Default", link: "/player" },
+              { label: "Player Theme 1", link: "/player/theme" },
             ]
           },
           { title: "Data Table", label: "Table", icon: "ti-layout-grid3",
             children: [
-              { label: "Table Default", link: "/table.html" },
+              { label: "Table Default", link: "/table" },
             ]
           },
           { title: "Form", label: "Form", icon: "ti-pencil-alt",
             children: [
-              { label: "Form Default", link: "/form.html" },
+              { label: "Form Default", link: "/form" },
             ]
           },
         ]

@@ -1,6 +1,4 @@
 import Vue from "vue"
-import im_table from "./app.vue"
-
-import vueCustomElement from "vue-custom-element"
-Vue.use(vueCustomElement)
-Vue.customElement("im-table", im_table)
+import VueCustomElement from "vue-custom-element"
+Vue.use(VueCustomElement)
+Vue.customElement("im-table", require("./app.vue").default)

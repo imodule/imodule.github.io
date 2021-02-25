@@ -40,6 +40,7 @@ module.exports = {
     externals: {
       //import from script browser
       vue: "Vue",
+      "vue-custom-element": "VueCustomElement",
       "element-ui": "ELEMENT"
     }
   },

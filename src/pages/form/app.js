@@ -1,5 +1,4 @@
 import Vue from "vue"
-import im_form from "./app.vue"
 import {
   Validator,
   install as VeeValidate
@@ -51,6 +50,6 @@ Validator.localize("vi", vi)
 
 // install the plugin
 Vue.use(VeeValidate)
-import vueCustomElement from "vue-custom-element"
-Vue.use(vueCustomElement)
-Vue.customElement("im-form", im_form)
+import VueCustomElement from "vue-custom-element"
+Vue.use(VueCustomElement)
+Vue.customElement("im-form", require("./app.vue").default)
