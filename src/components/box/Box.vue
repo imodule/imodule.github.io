@@ -24,7 +24,7 @@
           </div>
         </template>
       </div>
-      <div class="im-box-footer" v-if="ba != '' && bb != ''">
+      <div class="im-box-footer" v-if="ba || bb">
         <button
           v-ripple
           class="im-box-btn warning"
