@@ -18,6 +18,11 @@ window.onload = function(){
         toggle: true,
         dark: true,
         menu: [
+          { title: "Panel", label: "Card", icon: "ti-layout-list-thumb",
+            children: [
+              { label: "Card Default", link: "/card.html" },
+            ]
+          },
           { title: "Media", label: "Player", icon: "ti-control-play",
             children: [
               { label: "Player Default", link: "/player.html" },

@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap-table">
+  <div class="wrap-table" v-if="reInit">
     <Table
       :class="{ dark: base.option.dark, 'table-border': base.option.border }"
       :table-height="base.option.height"
@@ -25,8 +25,14 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      reInit: true
+    }
+  },
   watch: {
     base: {
+      immediate: true,
       handler() {
         // hack re-render
         let vm = this
@@ -54,10 +60,6 @@ export default {
     dblclick: function(data, index) {
       this.$emit("dblclick", data, index)
     }
-  },
-  mounted() {
-    var vm = this
-    vm.reInit = true //create dom
   }
 }
 </script>

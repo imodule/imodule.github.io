@@ -4,7 +4,7 @@
 
     #main tab-markdown>div {
       margin-top: 1rem;
-    }</style><link href="/css/table.css" rel="preload" as="style"><link href="/js/table.js" rel="preload" as="script"><link href="/css/table.css" rel="stylesheet"></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="page"><im-bone @clicked="onClicked" :header-data="headerData" :nav-left-data="navLeftData" :background-color="backgroundColor" :menu-float="menuFloat"><template :slot="slotLogo"><div class="header-logo"><img src="/img/logo.png"></div></template><template slot="default"><im-table id="im_table"><span vue-slot="style">.wrap-table{background: transparent}</span></im-table><tab-markdown><textarea vue-slot="tab-code">
+    }</style><link href="/css/table.css" rel="preload" as="style"><link href="/js/table.js" rel="preload" as="script"><link href="/css/table.css" rel="stylesheet"></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="page"><im-bone @clicked="onClicked" :header-data="headerData" :nav-left-data="navLeftData" :background-color="backgroundColor" :menu-float="menuFloat"><template :slot="slotLogo"><div class="header-logo"><img src="/img/logo.svg"></div></template><template slot="default"><im-table id="im_table"><span vue-slot="style">.wrap-table{background: transparent}</span></im-table><tab-markdown><textarea vue-slot="tab-code">
             <im-table id="im_table">
               <span vue-slot="style">
                 //edit css class (See tab "style")
@@ -126,6 +126,11 @@
         toggle: true,
         dark: true,
         menu: [
+          { title: "Panel", label: "Card", icon: "ti-layout-list-thumb",
+            children: [
+              { label: "Card Default", link: "/card.html" },
+            ]
+          },
           { title: "Media", label: "Player", icon: "ti-control-play",
             children: [
               { label: "Player Default", link: "/player.html" },

@@ -341,10 +341,10 @@ export default {
   width: 100%;
   position: relative;
   cursor: default;
-  background-color: $color-base-hover;
+  background-color: $color-base;
 }
 .dark.all-table-wrap {
-  background-color: $dark-color-base-hover;
+  background-color: $dark-color-base;
 }
 
 .all-table-wrap * {
@@ -352,14 +352,14 @@ export default {
 }
 
 .all-table-wrap thead th {
-  background-color: $color-primary;
+  background-color: $primary;
   height: 40px;
   padding: 8px;
   text-transform: capitalize;
 }
 .dark.all-table-wrap thead th {
-  background-color: $dark-color-primary;
-  border-color: $dark-color-primary;
+  background-color: $dark-primary;
+  border-color: $dark-primary;
 }
 
 .table-style {
@@ -372,39 +372,39 @@ export default {
   text-align: left;
   font-size: 13px;
   border: $input-border;
-  color: $color-text-regular;
-  border-color: $color-primary;
+  color: $color-base;
+  border-color: $primary;
 }
 .table-border th {
   border: $input-border !important;
 }
 .dark .table-style th {
-  color: $dark-color-text-lighten;
-  border-color: $dark-color-primary;
+  color: $dark-color-base;
+  border-color: $dark-primary;
 }
 .dark.table-border th {
   border: $dark-input-border !important;
 }
 
 .tr-hover {
-  background-color: $color-base !important;
+  background-color: $color-lighten !important;
 }
 .dark .tr-hover {
-  background-color: $dark-color-base !important;
+  background-color: $dark-color-lighten !important;
 }
 
 .table-style tbody tr:nth-child(even) {
-  background: $color-base-focus;
+  background: $color-lighten-low;
 }
 .dark .table-style tbody tr:nth-child(even) {
-  background: $dark-color-base-focus;
+  background: $dark-color-lighten-low;
 }
 
 .table-style td {
   padding: 8px;
   font-size: 12px;
   text-align: left;
-  color: $color-text-regular;
+  color: $text-base;
   border: $input-border;
   border-left-color: transparent;
   border-right-color: transparent;
@@ -413,19 +413,19 @@ export default {
 }
 .table-border td,
 .table-border th {
-  border-left-color: $color-border !important;
-  border-right-color: $color-border !important;
+  border-left-color: $border !important;
+  border-right-color: $border !important;
 }
 .dark .table-style td {
-  color: $dark-color-text-regular;
+  color: $dark-text-base;
   border: $dark-input-border;
   border-left-color: transparent;
   border-right-color: transparent;
 }
 .dark.table-border td,
 .dark.table-border th {
-  border-left-color: $dark-color-border !important;
-  border-right-color: $dark-color-border !important;
+  border-left-color: $dark-border !important;
+  border-right-color: $dark-border !important;
 }
 
 .table-style td > * {
@@ -433,10 +433,10 @@ export default {
 }
 
 .table-style tbody > tr:first-child > td {
-  border-top-color: $color-primary;
+  border-top-color: $primary;
 }
 .dark .table-style tbody > tr:first-child > td {
-  border-top-color: $dark-color-primary;
+  border-top-color: $dark-primary;
 }
 
 .table-wrap {
@@ -447,14 +447,14 @@ export default {
 }
 
 .fixRow-table {
-  background-color: $color-base-hover;
+  background-color: $color-base;
   position: relative;
   overflow: hidden;
   margin-right: 10px; /*fix*/
   z-index: 22;
 }
 .dark .fixRow-table {
-  background-color: $dark-color-base-hover;
+  background-color: $dark-color-base;
 }
 
 .table-t {
@@ -470,35 +470,35 @@ export default {
 .table-wrap::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  background-color: $color-base-visited;
+  background-color: $black-1;
 }
 .dark .table-wrap::-webkit-scrollbar {
-  background-color: $dark-color-base-visited;
+  background-color: $white-1;
 }
 
 .table-wrap::-webkit-scrollbar-track {
   box-shadow: inset 0 1 6px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  background-color: $color-base-visited;
+  background-color: $black-1;
 }
 .dark .table-wrap::-webkit-scrollbar-track {
-  background-color: $dark-color-base-visited;
+  background-color: $white-1;
 }
 
 .table-wrap::-webkit-scrollbar-thumb {
   border-radius: 5px;
   box-shadow: inset 0 1 6px rgba(0, 0, 0, 0.3);
-  background-color: $color-base;
+  background-color: $black-2;
 }
 .dark .table-wrap::-webkit-scrollbar-thumb {
-  background-color: $dark-color-base;
+  background-color: $white-2;
 }
 
 .table-wrap::-webkit-scrollbar-corner {
-  background-color: $color-base-visited;
+  background-color: $black-1;
 }
 .dark .table-wrap::-webkit-scrollbar-corner {
-  background-color: $dark-color-base-visited;
+  background-color: $white-1;
 }
 
 .table-fix-tbody-wrap {
@@ -509,11 +509,11 @@ export default {
 .fixLeftCol-table-wrap-title {
   position: absolute;
   top: 0;
-  background-color: $color-base-hover;
+  background-color: $color-base;
   z-index: 99;
 }
 .dark .fixLeftCol-table-wrap-title {
-  background-color: $dark-color-base-hover;
+  background-color: $dark-color-base;
 }
 
 /*Left side of body*/
@@ -521,13 +521,13 @@ export default {
 .fixLeftCol-table-wrap {
   overflow: hidden;
   position: absolute;
-  background-color: $color-base-hover;
+  background-color: $color-base;
   z-index: 33;
   top: 0;
   box-shadow: 2px 0 8px -2px rgba(0, 0, 0, 0.15);
 }
 .dark .fixLeftCol-table-wrap {
-  background-color: $dark-color-base-hover;
+  background-color: $dark-color-base;
 }
 /*
 .fixLeftCol-table-wrap tr {
@@ -538,24 +538,24 @@ export default {
   position: absolute;
   top: 0;
   right: 10px;
-  background-color: $color-base-hover;
+  background-color: $color-base;
   z-index: 99;
 }
 .dark .fixRightCol-table-wrap-title {
-  background-color: $dark-color-base-hover;
+  background-color: $dark-color-base;
 }
 
 .fixRightCol-table-wrap {
   overflow: hidden;
   position: absolute;
-  background-color: $color-base-hover;
+  background-color: $color-base;
   z-index: 33;
   top: 0;
   right: 10px;
   box-shadow: -2px 0 8px -2px rgba(0, 0, 0, 0.15);
 }
 .dark .fixRightCol-table-wrap {
-  background-color: $dark-color-base-hover;
+  background-color: $dark-color-base;
 }
 /*When the data is not too much and there is no scroll bar on the right*/
 

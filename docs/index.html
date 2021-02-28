@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/icon/themify-icons.css"><link rel="stylesheet" href="/css/vue-bone.css"><title>index-page</title><style>#main-wrap {
       padding: 1rem
-    }</style><link href="/js/index.js" rel="preload" as="script"></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="page"><im-bone @clicked="onClicked" :header-data="headerData" :nav-left-data="navLeftData" :background-color="backgroundColor" :menu-float="menuFloat"><template :slot="slotLogo"><div class="header-logo"><img src="/img/logo.png"></div></template><template v-slot><im-index></im-index></template></im-bone></div><script src="/js/vue.min.js"></script><script src="/js/vue-custom-element.min.js"></script><script src="/js/element-ui.js"></script><script src="/js/vue-bone.js"></script><script>window.onload = function(){
+    }</style><link href="/js/index.js" rel="preload" as="script"></head><body style="margin: 0;"><noscript><strong>We're sorry but multiple-pages doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="page"><im-bone @clicked="onClicked" :header-data="headerData" :nav-left-data="navLeftData" :background-color="backgroundColor" :menu-float="menuFloat"><template :slot="slotLogo"><div class="header-logo"><img src="/img/logo.svg"></div></template><template v-slot><im-index></im-index></template></im-bone></div><script src="/js/vue.min.js"></script><script src="/js/vue-custom-element.min.js"></script><script src="/js/element-ui.js"></script><script src="/js/vue-bone.js"></script><script>window.onload = function(){
   var app = new Vue({
     el: '#page',
     data: {
@@ -19,6 +19,11 @@
         toggle: true,
         dark: true,
         menu: [
+          { title: "Panel", label: "Card", icon: "ti-layout-list-thumb",
+            children: [
+              { label: "Card Default", link: "/card.html" },
+            ]
+          },
           { title: "Media", label: "Player", icon: "ti-control-play",
             children: [
               { label: "Player Default", link: "/player.html" },

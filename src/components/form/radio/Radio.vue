@@ -93,7 +93,7 @@ export default {
   $r: &;
   font-size: 14px;
   cursor: pointer;
-  color: $color-text-regular;
+  color: $text-base;
   + #{$r} {
     margin-left: 10px;
   }
@@ -103,7 +103,7 @@ export default {
     border-radius: 100%;
     cursor: pointer;
     display: inline-block;
-    background-color: $color-base-visited;
+    background-color: $color-darken-low;
     border: $input-border;
     margin-right: 10px;
     position: relative;
@@ -111,16 +111,16 @@ export default {
     box-sizing: border-box;
   }
   &--checked {
-    color: $color-primary;
+    color: $primary;
     #{$r}__inner {
-      background-color: $color-primary;
-      border-color: $color-primary;
+      background-color: $primary;
+      border-color: $primary;
       &::after {
         position: absolute;
         content: "";
         width: 6px;
         height: 6px;
-        background-color: $color-base-visited;
+        background-color: $color-darken-low;
         border-radius: 100%;
         left: 50%;
         top: 50%;
@@ -128,22 +128,22 @@ export default {
       }
     }
     &#{$r}--bordered {
-      border-color: $color-primary;
+      border-color: $primary;
     }
   }
   &--disabled {
-    color: $color-base-active;
+    color: $color-darken;
     cursor: no-drop;
     #{$r}__inner {
-      background-color: $color-base-hover;
-      border-color: $color-base-active;
+      background-color: $color-lighten;
+      border-color: $color-darken;
       &::after {
         background-color: $color-base;
       }
     }
   }
   &--bordered {
-    border-color: $color-primary;
+    border-color: $primary;
     border: $input-border;
     border-radius: $input-border-radius;
     padding: $input-inner-padding;
@@ -159,29 +159,29 @@ export default {
 
 .dark .im-radio {
   $r: &;
-  color: $dark-color-text-regular;
+  color: $dark-text-base;
   &__inner {
     border: $dark-input-border;
-    background-color: $dark-color-base-visited;
+    background-color: $dark-color-darken-low;
   }
   &--checked {
-    color: $dark-color-primary;
+    color: $dark-primary;
     #{$r}__inner {
-      background-color: $dark-color-primary;
-      border-color: $dark-color-primary;
+      background-color: $dark-primary;
+      border-color: $dark-primary;
       &::after {
-        background-color: $dark-color-base-visited;
+        background-color: $dark-color-darken-low;
       }
     }
     &#{$r}--bordered {
-      border-color: $dark-color-primary;
+      border-color: $dark-primary;
     }
   }
   &--disabled {
-    color: $dark-color-base-active;
+    color: $dark-color-darken;
     #{$r}__inner {
-      background-color: $dark-color-base-hover;
-      border-color: $dark-color-base-active;
+      background-color: $dark-color-lighten;
+      border-color: $dark-color-darken;
       &::after {
         background-color: $dark-color-base;
       }
@@ -189,7 +189,7 @@ export default {
   }
   &--bordered {
     border: $dark-input-border;
-    border-color: $dark-color-primary;
+    border-color: $dark-primary;
   }
 }
 </style>

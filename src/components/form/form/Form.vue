@@ -68,7 +68,7 @@ export default {
     &-label {
       box-sizing: border-box;
       font-size: 14px;
-      color: $color-text-regular;
+      color: $text-base;
       padding-right: 20px;
       align-self: center;
     }
@@ -78,7 +78,7 @@ export default {
     &-error {
       position: absolute;
       font-size: 12px;
-      color: $color-danger;
+      color: $danger;
       line-height: 20px;
     }
     &-validate {
@@ -104,10 +104,10 @@ export default {
   $r: &;
   &__item {
     &-label {
-      color: $dark-color-text-regular;
+      color: $dark-text-base;
     }
     &-error {
-      color: $dark-color-danger;
+      color: $dark-danger;
     }
   }
 }

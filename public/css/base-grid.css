@@ -6,7 +6,7 @@
 html {
   font-family: sans-serif;
   font-size: 14px;
-  font-size: min(max(1rem, 4vw), 18px);
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1000));
   overflow-x: hidden;
 }
 

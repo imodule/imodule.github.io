@@ -43,11 +43,12 @@ export default {
   },
   data() {
     return {
-      reInit: false
+      reInit: true
     }
   },
   watch: {
     base: {
+      immediate: true,
       handler() {
         // hack re-render
         let vm = this
@@ -72,10 +73,6 @@ export default {
       }
       return ""
     }
-  },
-  mounted() {
-    var vm = this
-    vm.reInit = true //create dom
   }
 }
 </script>

@@ -131,36 +131,36 @@ export default {
   font-size: 14px;
   cursor: pointer;
   display: inline-table;
-  color: $color-text-regular;
+  color: $text-base;
   + #{$r} {
     margin-left: 10px;
   }
   &--checked {
-    color: $color-primary;
+    color: $primary;
     #{$r}__inner {
-      background-color: $color-primary;
-      border-color: $color-primary;
+      background-color: $primary;
+      border-color: $primary;
     }
     &#{$r}--bordered {
-      border-color: $color-primary;
+      border-color: $primary;
     }
     &#{$r}--disabled {
       #{$r}__inner {
-        border-color: $color-base-active;
+        border-color: $color-darken;
       }
       i {
-        color: $color-base-active;
+        color: $color-darken;
       }
     }
   }
   &--disabled {
     cursor: no-drop;
     #{$r}__inner {
-      background-color: $color-base-hover;
+      background-color: $color-lighten;
       cursor: no-drop;
     }
     #{$r}__label {
-      color: $color-base-active;
+      color: $color-darken;
     }
   }
   &--bordered {
@@ -184,7 +184,7 @@ export default {
     width: 14px;
     height: 14px;
     margin-right: 5px;
-    background-color: $color-base-visited;
+    background-color: $color-darken-low;
     border: $input-border;
     border-radius: 3px;
     position: relative;
@@ -204,38 +204,38 @@ export default {
 
 .dark .im-checkbox {
   $r: &;
-  color: $dark-color-text-regular;
+  color: $dark-text-base;
   &--checked {
-    color: $dark-color-primary;
+    color: $dark-primary;
     #{$r}__inner {
-      background-color: $dark-color-primary;
-      border-color: $dark-color-primary;
+      background-color: $dark-primary;
+      border-color: $dark-primary;
     }
     &#{$r}--bordered {
-      border-color: $dark-color-primary;
+      border-color: $dark-primary;
     }
     &#{$r}--disabled {
       #{$r}__inner {
-        border-color: $dark-color-base-active;
+        border-color: $dark-color-darken;
       }
       i {
-        color: $dark-color-base-active;
+        color: $dark-color-darken;
       }
     }
   }
   &--disabled {
     #{$r}__inner {
-      background-color: $dark-color-base-hover;
+      background-color: $dark-color-lighten;
     }
     #{$r}__label {
-      color: $dark-color-base-active;
+      color: $dark-color-darken;
     }
   }
   &--bordered {
     border: $dark-input-border;
   }
   &__inner {
-    background-color: $dark-color-base-visited;
+    background-color: $dark-color-darken-low;
     border: $dark-input-border;
   }
 }

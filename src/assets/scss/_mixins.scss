@@ -10,16 +10,16 @@
   line-height: $input-height;
   padding: $input-inner-padding;
   height: $input-height;
-  background-color: $color-base-visited;
+  background-color: $color-darken-low;
   font-size: 14px;
-  color: $color-text-regular;
+  color: $text-base;
   transition: border-color 0.3s;
   &:focus {
-    border-color: $color-primary;
+    border-color: $primary;
     transition: border-color 0.3s;
   }
   &::-webkit-input-placeholder {
-    color: $color-text-lighten;
+    color: $text-lighten;
   }
 }
 
@@ -32,16 +32,16 @@
   line-height: $input-height;
   padding: $input-inner-padding;
   height: $input-height;
-  background-color: $dark-color-base-visited;
+  background-color: $dark-color-darken-low;
   font-size: 14px;
-  color: $dark-color-text-regular;
+  color: $dark-text-base;
   transition: border-color 0.3s;
   &:focus {
-    border-color: $dark-color-primary;
+    border-color: $dark-primary;
     transition: border-color 0.3s;
   }
   &::-webkit-input-placeholder {
-    color: $dark-color-text-darken-low;
+    color: $dark-text-darken-low;
   }
 }
 /*------------------------------------*/

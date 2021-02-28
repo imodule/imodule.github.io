@@ -139,7 +139,7 @@ export default {
     @include form-input-default();
     &[disabled] {
       cursor: no-drop;
-      background-color: $color-base-hover;
+      background-color: $color-lighten;
     }
     &[type="number"] {
       &::-webkit-inner-spin-button,
@@ -150,7 +150,7 @@ export default {
   }
   &__prefix,
   &__suffix {
-    color: $color-text-regular;
+    color: $text-base;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -171,11 +171,11 @@ export default {
     border: $input-border;
     border-right-color: transparent;
     border-bottom: $input-border;
-    color: $color-text-lighten;
+    color: $text-lighten;
     padding: $input-inner-padding;
     border-top-left-radius: $input-border-radius;
     border-bottom-left-radius: $input-border-radius;
-    background-color: $color-base-hover;
+    background-color: $color-lighten;
     position: relative;
     width: 1px;
     white-space: nowrap;
@@ -187,8 +187,8 @@ export default {
     border-top-right-radius: $input-border-radius;
     border-bottom-right-radius: $input-border-radius;
     padding: $input-inner-padding;
-    color: $color-text-lighten;
-    background-color: $color-base-hover;
+    color: $text-lighten;
+    background-color: $color-lighten;
     position: relative;
     width: 1px;
     white-space: nowrap;
@@ -226,24 +226,24 @@ export default {
   &__inner {
     @include dark-form-input-default();
     &[disabled] {
-      background-color: $dark-color-base-hover;
+      background-color: $dark-color-lighten;
     }
   }
   &__prefix,
   &__suffix {
-    color: $dark-color-text-regular;
+    color: $dark-text-base;
   }
   &__prepend {
     border: $dark-input-border;
     border-right-color: transparent;
-    color: $dark-color-text-lighten;
-    background-color: $dark-color-base-hover;
+    color: $dark-text-lighten;
+    background-color: $dark-color-lighten;
   }
   &__append {
     border: $dark-input-border;
     border-left-color: transparent;
-    color: $dark-color-text-lighten;
-    background-color: $dark-color-base-hover;
+    color: $dark-text-lighten;
+    background-color: $dark-color-lighten;
   }
 }
 
@@ -253,7 +253,7 @@ export default {
     width: 100%;
     resize: vertical;
     &[disabled] {
-      background-color: $color-base-hover;
+      background-color: $color-lighten;
     }
   }
 }
@@ -262,7 +262,7 @@ export default {
   &__inner {
     @include dark-form-input-default();
     &[disabled] {
-      background-color: $dark-color-base-hover;
+      background-color: $dark-color-lighten;
     }
   }
 }

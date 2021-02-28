@@ -337,10 +337,10 @@ export default {
     &-item {
       box-sizing: border-box;
       font-size: 14px;
-      background-color: $color-base-hover;
+      background-color: $color-lighten;
       border: $input-border;
       border-radius: $input-border-radius;
-      color: $color-text-regular;
+      color: $text-base;
       padding: 2px 5px;
       flex-shrink: 0;
       margin: 2px;
@@ -348,9 +348,9 @@ export default {
       > i {
         position: relative;
         top: 1px;
-        color: $color-base-active;
+        color: $color-darken;
         &:hover {
-          color: $color-text-regular;
+          color: $text-base;
         }
       }
     }
@@ -378,11 +378,11 @@ export default {
   &--disabled {
     .im-input__suffix {
       i {
-        color: $color-base-active;
+        color: $color-darken;
       }
     }
     .im-input__inner {
-      color: $color-base-active;
+      color: $color-darken;
       cursor: no-drop !important;
     }
   }
@@ -393,12 +393,12 @@ export default {
   &__tag {
     &-item {
       border: $dark-input-border;
-      background-color: $dark-color-base-hover;
-      color: $dark-color-text-regular;
+      background-color: $dark-color-lighten;
+      color: $dark-text-base;
       > i {
-        color: $dark-color-base-active;
+        color: $dark-color-darken;
         &:hover {
-          color: $dark-color-text-regular;
+          color: $dark-text-base;
         }
       }
     }
@@ -406,11 +406,11 @@ export default {
   &--disabled {
     .im-input__suffix {
       i {
-        color: $dark-color-base-active;
+        color: $dark-color-darken;
       }
     }
     .im-input__inner {
-      color: $dark-color-base-active;
+      color: $dark-color-darken;
     }
   }
 }

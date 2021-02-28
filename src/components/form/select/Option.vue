@@ -76,15 +76,15 @@ export default {
     color: $color-base;
   }
   &--hovered {
-    background-color: $color-base-hover;
+    background-color: $color-lighten;
     &[disabled] {
       background-color: inherit;
     }
   }
   &--selected {
-    color: $color-primary;
+    color: $primary;
     &:hover {
-      background-color: $color-base-hover;
+      background-color: $color-lighten;
     }
   }
 }
@@ -94,12 +94,12 @@ export default {
     color: $dark-color-base;
   }
   &--hovered {
-    background-color: $dark-color-base-hover;
+    background-color: $dark-color-lighten;
   }
   &--selected {
-    color: $dark-color-primary;
+    color: $dark-primary;
     &:hover {
-      background-color: $dark-color-base-hover;
+      background-color: $dark-color-lighten;
     }
   }
 }

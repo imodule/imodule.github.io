@@ -1,39 +1,55 @@
 /*------------------------------------*/
-/*  COLORS  */
+/*  COLORS COMMONS  */
 /*------------------------------------*/
-$color-primary: #498aed;
-$color-success: #68cc68;
-$color-warning: #efc669;
-$color-danger: #e4474e;
-$color-text-regular: #303133;
-$color-text-lighten-low: lighten($color-text-regular, 20%);
-$color-text-lighten: lighten($color-text-regular, 40%);
-$color-text-darken: darken($color-text-regular, 40%);
-$color-text-darken-low: darken($color-text-regular, 20%);
-$color-base-active: #aaa; // normal dark
-$color-base-focus: #e8e8e8; // normal light
-$color-base: #ddd;
-$color-base-hover: #f6f6f6; // normal lighter
-$color-base-visited: #fff; // normal darker
-$color-border: $color-base;
+$white: #fff;
+$white-0: rgba(#fff, 0.05);
+$white-1: rgba(#fff, 0.1);
+$white-2: rgba(#fff, 0.25);
+$white-5: rgba(#fff, 0.5);
+$white-8: rgba(#fff, 0.8);
+
+$black: #000;
+$black-0: rgba(#000, 0.05);
+$black-1: rgba(#000, 0.1);
+$black-2: rgba(#000, 0.25);
+$black-5: rgba(#000, 0.5);
+$black-8: rgba(#000, 0.8);
 /*------------------------------------*/
 /*  DARK COLORS */
 /*------------------------------------*/
-$dark-color-primary: #3bafda;
-$dark-color-success: #1abc9c;
-$dark-color-warning: #f7b84b;
-$dark-color-danger: #f1556c;
-$dark-color-text-regular: #969dad;
-$dark-color-text-lighten-low: lighten($dark-color-text-regular, 20%);
-$dark-color-text-lighten: lighten($dark-color-text-regular, 40%);
-$dark-color-text-darken: darken($dark-color-text-regular, 40%);
-$dark-color-text-darken-low: darken($dark-color-text-regular, 20%);
-$dark-color-base-active: #272d33; // normal dark
-$dark-color-base-focus: #404b56; // normal light
-$dark-color-base: #44505d;
-$dark-color-base-hover: #3b4651; // normal lighter
-$dark-color-base-visited: #2f363e; // normal darker
-$dark-color-border: $dark-color-base;
+$dark-primary: #3bafda;
+$dark-success: #1abc9c;
+$dark-warning: #f7b84b;
+$dark-danger: #f1556c;
+$dark-text-base: #969dad;
+$dark-text-lighten-low: lighten($dark-text-base, 20%);
+$dark-text-lighten: lighten($dark-text-base, 40%);
+$dark-text-darken: darken($dark-text-base, 40%);
+$dark-text-darken-low: darken($dark-text-base, 20%);
+$dark-color-lighten-low: #404b56; // normal light
+$dark-color-lighten: #44505d; // normal lighter
+$dark-color-base: #3b4651;
+$dark-color-darken: #272d33; // normal dark
+$dark-color-darken-low: #2f363e; // normal darker
+$dark-border: $dark-color-base;
+/*------------------------------------*/
+/*  LIGHT COLORS  */ // variable : invert lighten to darken
+/*------------------------------------*/
+$primary: #498aed;
+$success: #68cc68;
+$warning: #efc669;
+$danger: #e4474e;
+$text-base: #303133;
+$text-lighten-low: darken($text-base, 20%);
+$text-lighten: darken($text-base, 40%);
+$text-darken: lighten($text-base, 40%);
+$text-darken-low: lighten($text-base, 20%);
+$color-lighten-low: #ddd;
+$color-lighten: #aaa;
+$color-base: #e8e8e8;
+$color-darken: #fff;
+$color-darken-low: #f6f6f6;
+$border: $color-base;
 /*------------------------------------*/
 /*  FONTS  */
 /*------------------------------------*/
@@ -45,6 +61,6 @@ $input-font-size: 14px;
 $input-height: 40px;
 $input-inner-padding: 0 15px;
 $input-border-radius: 4px;
-$input-border: 1px solid $color-border;
+$input-border: 1px solid $border;
 
-$dark-input-border: 1px solid $dark-color-border;
+$dark-input-border: 1px solid $dark-border;
